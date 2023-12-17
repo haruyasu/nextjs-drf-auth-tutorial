@@ -14,7 +14,7 @@ SECRET_KEY = "django-insecure-aokwvmq)vgxzyz(tq@3c%fq!fec(bspdd$2lfkxf4=5)3ys-!w
 
 DEBUG = True
 
-# 本場環境では、ALLOWED_HOSTSを指定する
+# 本番環境では、ALLOWED_HOSTSを指定する
 ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
@@ -70,7 +70,7 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 
 default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3")
 
-# 本場環境では、DATABASE_URLにPostgreSQLのURLを指定する
+# 本番環境では、DATABASE_URLにPostgreSQLのURLを指定する
 DATABASES = {
     "default": config("DATABASE_URL", default=default_dburl, cast=dburl),
 }
